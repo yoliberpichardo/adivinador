@@ -129,8 +129,9 @@ class hadas(nanatsu_no_Taizai):
     def clanes(self,clan):
         return '{}  es de la raza de: {}'.format(self.nombre,self.clan)
 
-integr_del_clan = demonios("meliodas","demoniaca")
+integr_del_clan = demonios("meliodas","demonios")
 print(integr_del_clan.datos())
+print(integr_del_clan.nombre)
 
 
 
