@@ -135,40 +135,68 @@
 
 ##########ejercicio con herencia######### 
 
-import math
-class Calculos:
-    def __init__(self,numero):
-        self.n = numero
-        self.datos = [0 for i in range(numero)]
+# import math
+# class Calculos:
+#     def __init__(self,numero):
+#         self.n = numero
+#         self.datos = [0 for i in range(numero)]
     
-    def igresodato(self):
-        self.datos = [int(input('ingresar datos '+ str(i+1) + ' = '))for i in range(self.n)]
+#     def igresodato(self):
+#         self.datos = [int(input('ingresar datos '+ str(i+1) + ' = '))for i in range(self.n)]
 
-class operaciones_b(Calculos):
-    def __init__(self):
-        Calculos.__init__(self,2)
+# class operaciones_b(Calculos):
+#     def __init__(self):
+#         Calculos.__init__(self,2)
 
-    def multi(self):
-        a,b, = self.datos
-        m = a * b
-        return 'el resultado es: {}'.format(m)  
+#     def multi(self):
+#         a,b, = self.datos
+#         m = a * b
+#         return 'el resultado es: {}'.format(m)  
 
-    def div(self):
-        a,b, = self.datos
-        d = a / b
-        return 'el resultado es: {}'.format(d)
+#     def div(self):
+#         a,b, = self.datos
+#         d = a / b
+#         return 'el resultado es: {}'.format(d)
 
-class raiz(Calculos):
-    def __init__(self):
-       Calculos.__init__(self,1)
+# class raiz(Calculos):
+#     def __init__(self):
+#        Calculos.__init__(self,1)
     
-    def cuadrada(self):
-        a, = self.datos
-        return 'el resultado es: {}'.format(math.sqrt(a))
+#     def cuadrada(self):
+#         a, = self.datos
+#         return 'el resultado es: {}'.format(math.sqrt(a))
 
 
-ejemplo = raiz()
-print(ejemplo.igresodato())
-print(ejemplo.cuadrada())
+# ejemplo = raiz()
+# print(ejemplo.igresodato())
+# print(ejemplo.cuadrada())
 
- 
+ ##### herencia multiples#####
+class estudios:
+    def __init__(self):
+        pass
+    
+    def escuela(self):
+        return "estudio en el ITM"
+
+class trabajo:
+    def __init__(self):
+        pass
+
+    def empresa(self):
+        return "Trabaja Intellisy"
+
+class profeccion:
+    def __init__(self):
+        pass 
+    
+    def Ing(self):
+        return "es ingeniero en sistema"
+
+class datos_personales(estudios,trabajo,profeccion):
+    def __del__(self):
+        return "la informacion no esta completa"
+
+isidro = datos_personales()
+
+print(isidro.empresa())
