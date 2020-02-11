@@ -109,32 +109,66 @@
 # print(mi_gmail.enviado)
 
 ######Herencia#########
-class nanatsu_no_Taizai:
-    pass
-    def __init__(self,nombre,raza):
-        self.nombre = nombre
-        self.raza = raza
-    def datos(self):
-        return '{}  es de la raza de: {}'.format(self.nombre,self.raza)
+# class nanatsu_no_Taizai:
+#     pass
+#     def __init__(self,nombre,raza):
+#         self.nombre = nombre
+#         self.raza = raza
+#     def datos(self):
+#         return '{}  es de la raza de: {}'.format(self.nombre,self.raza)
 
-class demonios(nanatsu_no_Taizai):
-    def clanes(self,clan):
-        return '{}  es de la raza de: {}'.format(self.nombre,self.clan)
+# class demonios(nanatsu_no_Taizai):
+#     def clanes(self,clan):
+#         return '{}  es de la raza de: {}'.format(self.nombre,self.clan)
 
-class diosas(nanatsu_no_Taizai):
-    def clanes(self,clan):
-        return '{}  es de la raza de: {}'.format(self.nombre,self.clan)
+# class diosas(nanatsu_no_Taizai):
+#     def clanes(self,clan):
+#         return '{}  es de la raza de: {}'.format(self.nombre,self.clan)
 
-class hadas(nanatsu_no_Taizai):
-    def clanes(self,clan):
-        return '{}  es de la raza de: {}'.format(self.nombre,self.clan)
+# class hadas(nanatsu_no_Taizai):
+#     def clanes(self,clan):
+#         return '{}  es de la raza de: {}'.format(self.nombre,self.clan)
 
-integr_del_clan = demonios("meliodas","demonios")
-print(integr_del_clan.datos())
-print(integr_del_clan.nombre)
+# integr_del_clan = demonios("meliodas","demonios")
+# print(integr_del_clan.datos())
+# print(integr_del_clan.nombre)
+
+##########ejercicio con herencia######### 
+
+import math
+class Calculos:
+    def __init__(self,numero):
+        self.n = numero
+        self.datos = [0 for i in range(numero)]
+    
+    def igresodato(self):
+        self.datos = [int(input('ingresar datos '+ str(i+1) + ' = '))for i in range(self.n)]
+
+class operaciones_b(Calculos):
+    def __init__(self):
+        Calculos.__init__(self,2)
+
+    def multi(self):
+        a,b, = self.datos
+        m = a * b
+        return 'el resultado es: {}'.format(m)  
+
+    def div(self):
+        a,b, = self.datos
+        d = a / b
+        return 'el resultado es: {}'.format(d)
+
+class raiz(Calculos):
+    def __init__(self):
+       Calculos.__init__(self,1)
+    
+    def cuadrada(self):
+        a, = self.datos
+        return 'el resultado es: {}'.format(math.sqrt(a))
 
 
-
-
+ejemplo = raiz()
+print(ejemplo.igresodato())
+print(ejemplo.cuadrada())
 
  
