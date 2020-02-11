@@ -139,7 +139,7 @@
 # class Calculos:
 #     def __init__(self,numero):
 #         self.n = numero
-#         self.datos = [0 for i in range(numero)]
+#         self.datos = [0 for i in range(numero)] 
     
 #     def igresodato(self):
 #         self.datos = [int(input('ingresar datos '+ str(i+1) + ' = '))for i in range(self.n)]
@@ -167,9 +167,9 @@
 #         return 'el resultado es: {}'.format(math.sqrt(a))
 
 
-# ejemplo = raiz()
+# ejemplo = operaciones_b()
 # print(ejemplo.igresodato())
-# print(ejemplo.cuadrada())
+# print(ejemplo.multi())
 
  ##### herencia multiples#####
 class estudios:
@@ -200,3 +200,10 @@ class datos_personales(estudios,trabajo,profeccion):
 isidro = datos_personales()
 
 print(isidro.empresa())
+
+
+########### f- string############
+
+ 
+
+
