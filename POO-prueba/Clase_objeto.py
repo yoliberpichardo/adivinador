@@ -172,38 +172,78 @@
 # print(ejemplo.multi())
 
  ##### herencia multiples#####
-class estudios:
-    def __init__(self):
-        pass
+# class estudios:
+#     def __init__(self):
+#         pass
     
-    def escuela(self):
-        return "estudio en el ITM"
+#     def escuela(self):
+#         return "estudio en el ITM"
 
-class trabajo:
-    def __init__(self):
-        pass
+# class trabajo:
+#     def __init__(self):
+#         pass
 
-    def empresa(self):
-        return "Trabaja Intellisy"
+#     def empresa(self):
+#         return "Trabaja Intellisy"
 
-class profeccion:
-    def __init__(self):
-        pass 
+# class profeccion:
+#     def __init__(self):
+#         pass 
     
-    def Ing(self):
-        return "es ingeniero en sistema"
+#     def Ing(self):
+#         return "es ingeniero en sistema"
 
-class datos_personales(estudios,trabajo,profeccion):
-    def __del__(self):
-        return "la informacion no esta completa"
+# class datos_personales(estudios,trabajo,profeccion):
+#     def __del__(self):
+#         return "la informacion no esta completa"
 
-isidro = datos_personales()
+# isidro = datos_personales()
 
-print(isidro.empresa())
+# print(isidro.empresa())
 
 
-########### f- string############
+# ########### f- string############
 
- 
+## esto es una forma mas simplificada del ".format()" y se usa forma == "% soy % y tengo %."%(a,b,c) los parametros dependen de los modulos que use por ejemplo.
+
+# nombre = "jerson"
+# edad = 17 
+# ciudad = "neiba"
+# print("hola % s tengo % s años de edad y soy proveniente de % s."%(nombre,edad,ciudad))
+
+# # f"str" es la forma mas simplificada de las funciones anteriores == f"{self.example} {self.example}".
+# # ejemplo :
+# nombre = "jerson"
+# edad = 17 
+# ciudad = "neiba"
+# print(f"hola soy {nombre} tengo {edad}")
+
+
+############## Metodos clase & estaticos##################
+### @classmethod ###
+
+## metodo clase: este metodo puede ser llamado sin crear una instancia de la clase.
+## ejemplo:
+
+class galleta:
+    def __init__(self,ingredientes):
+        self.ingredientes = ingredientes
+    
+    def __repr__(self):
+        return f"galleta({self.ingredientes !r})"
+
+    @classmethod
+    def galleta_vainilla(cls):
+        return cls(['huevo','harina','leche','vainilla','azucar'])
+    
+    @classmethod
+    def galleta_fresa(cls):
+        return cls(['huevo','harina','leche','fresa','azucar'])
+print(galleta.galleta_vainilla(),galleta.galleta_fresa())
+
+
+##  metodo estatico: 
+
+
 
 
