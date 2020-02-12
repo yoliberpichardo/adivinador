@@ -243,24 +243,64 @@ import math
 # print(galleta.galleta_vainilla(),galleta.galleta_fresa())
 
 
-##  metodo estatico: 
-class galleta: 
-    def __init__(self,ingredientes,tamaño):
-            self.ingredientes = ingredientes
-            self.tamaño = tamaño
+# ##  metodo estatico: 
+# class galleta: 
+#     def __init__(self,ingredientes,tamaño):
+#             self.ingredientes = ingredientes
+#             self.tamaño = tamaño
 
-    def __repr__(self):
-        return (f'galleta({self.ingredientes},' f'{self.tamaño})')
+#     def __repr__(self):
+#         return (f'galleta({self.ingredientes},' f'{self.tamaño})')
 
-    def area(self):
-        return self.tamaño_area(self.tamaño)
+#     def area(self):
+#         return self.tamaño_area(self.tamaño)
     
-    @staticmethod
-    def tamaño_area(B):
-        return B ** 2 * math.pi
+#     @staticmethod
+#     def tamaño_area(B):
+#         return B ** 2 * math.pi
 
-la_galleta = galleta(['harina','azucar','leche','huevo'],4)
-print(la_galleta.ingredientes)
+# la_galleta = galleta(['harina','azucar','leche','huevo'],4)
+# print(la_galleta.ingredientes)
+
+
+################ polimorfismo################
+
+### ejemplo
+# class avion:
+#     turbinas = 4
+#     def vuelo(self):
+#         return "el avion vuela con 4 turbinas"
+
+# class jet:
+#     turbinas = 2
+#     def vuelo(self):
+#         return "el jet vuela con 2 turbinas"
+
+# class cohete_espacial:
+#     turbinas = 6
+#     def vuelo(self):
+#         return "el cohete_espacial vuela con 2 turbinas"
+
+## practica
+
+class aves:
+    def __init__(self,nombre):
+        self.nombre = nombre
+    def tipo_aves(self):
+        pass
+
+class palomas(aves):
+    def tipo_aves(self):
+        return "ave pacifista"
+
+class avetrus(aves):
+    def tipo_aves(self):
+        return "ave salvaje"
+
+nv_aves = palomas("george")
+print(nv_aves.tipo_aves())
+
+
 
 
     
