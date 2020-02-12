@@ -135,7 +135,7 @@
 
 ##########ejercicio con herencia######### 
 
-# import math
+import math
 # class Calculos:
 #     def __init__(self,numero):
 #         self.n = numero
@@ -225,25 +225,44 @@
 ## metodo clase: este metodo puede ser llamado sin crear una instancia de la clase.
 ## ejemplo:
 
-class galleta:
-    def __init__(self,ingredientes):
-        self.ingredientes = ingredientes
+## metodo clase
+# class galleta:
+#     def __init__(self,ingredientes):
+#         self.ingredientes = ingredientes
     
-    def __repr__(self):
-        return f"galleta({self.ingredientes !r})"
+#     def __repr__(self):
+#         return f"galleta({self.ingredientes !r})"
 
-    @classmethod
-    def galleta_vainilla(cls):
-        return cls(['huevo','harina','leche','vainilla','azucar'])
+#     @classmethod
+#     def galleta_vainilla(cls):
+#         return cls(['huevo','harina','leche','vainilla','azucar'])
     
-    @classmethod
-    def galleta_fresa(cls):
-        return cls(['huevo','harina','leche','fresa','azucar'])
-print(galleta.galleta_vainilla(),galleta.galleta_fresa())
+#     @classmethod
+#     def galleta_fresa(cls):
+#         return cls(['huevo','harina','leche','fresa','azucar'])
+# print(galleta.galleta_vainilla(),galleta.galleta_fresa())
 
 
 ##  metodo estatico: 
+class galleta: 
+    def __init__(self,ingredientes,tamaño):
+            self.ingredientes = ingredientes
+            self.tamaño = tamaño
+
+    def __repr__(self):
+        return (f'galleta({self.ingredientes},' f'{self.tamaño})')
+
+    def area(self):
+        return self.tamaño_area(self.tamaño)
+    
+    @staticmethod
+    def tamaño_area(B):
+        return B ** 2 * math.pi
+
+la_galleta = galleta(['harina','azucar','leche','huevo'],4)
+print(la_galleta.ingredientes)
 
 
+    
 
 
