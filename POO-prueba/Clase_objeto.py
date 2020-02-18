@@ -281,7 +281,7 @@ import math
 #     def vuelo(self):
 #         return "el cohete_espacial vuela con 2 turbinas"
 
-## practica
+# practica
 
 class aves:
     def __init__(self,nombre):
@@ -299,6 +299,8 @@ class avetrus(aves):
 
 nv_aves = palomas("george")
 print(nv_aves.tipo_aves())
+
+
 
 
 
